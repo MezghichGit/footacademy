@@ -19,6 +19,7 @@ export class ListEquipesComponent implements OnInit {
   public nbr: number = 0;
   public res: boolean = false;
 
+
   constructor(private service:EquipeService) { }
 
   ngOnInit(): void {

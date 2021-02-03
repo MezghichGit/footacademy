@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEquipeComponent implements OnInit {
 
+    /// attribut de l'équipe
+
+  public iden: number;
+  public name: string ;
+  public country: string;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
+  createEquipe(data)
+  {
+    alert(data.value.iden + " " + data.value.name + " " + data.value.country);
+    //console.log(this.iden + " " + this.name + " " + this.country);
+  }
 }
