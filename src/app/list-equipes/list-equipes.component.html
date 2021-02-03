@@ -1,6 +1,19 @@
 <h1 align="center">Liste des équipes</h1>
 
+<h3>Data du Mongo DB</h3>
 
+<table border="1" align="center" class="table">
+    <tr><th>ID</th><th>Name</th><th>Counrty</th><th>Supprimer</th></tr>
+    <tr *ngFor="let team of teams">
+     <td>{{team.id}}</td>
+     <td>{{team.name}}</td>
+     <td> {{team.country | uppercase }}</td>
+     <td><a class="btn btn-danger">Supprimer</a></td>
+    </tr>
+</table>
+
+
+<hr/>
 
 Centre de formation : {{titre}}
 <br/>
@@ -38,10 +51,3 @@ Nombre d'équipes : {{nbr}}
 </table>
 
 <hr/>
-<h3>Data du Mongo DB</h3>
-<ul>
-    <li *ngFor="let team of teams">
-        {{team.id}}--
-        {{team.name}}--
-        {{team.country | uppercase }}</li>
-</ul>
