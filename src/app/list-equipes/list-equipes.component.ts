@@ -10,6 +10,7 @@ export class ListEquipesComponent implements OnInit {
   titre: string = "Global Knowledge";  // attribut
 
   public nbr: number = 0;
+  public res: boolean = false;
 
   constructor() { }
 
@@ -18,5 +19,9 @@ export class ListEquipesComponent implements OnInit {
 
   increment() { 
    this.nbr = this.nbr + 1;
+  }
+
+  display() { 
+    this.res = !this.res;
   }
 }

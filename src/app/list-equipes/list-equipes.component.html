@@ -6,4 +6,9 @@ Centre de formation : {{titre}}
 <br/>
 
 <button class="btn btn-primary" (click)="increment()">Cliquer pour augmenter le nombre</button>
-Nombre d'équipe : {{nbr}}
+Nombre d'équipes : {{nbr}}
+
+
+<div id="zone" [hidden]="res">Lists des équipes</div>
+<br/>
+<button class="btn btn-primary" (click)="display()">Show or Hide</button>
