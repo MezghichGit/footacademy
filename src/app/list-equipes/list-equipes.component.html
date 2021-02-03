@@ -36,3 +36,12 @@ Nombre d'équipes : {{nbr}}
      <td>{{joueur.poste}}</td>
     </tr>
 </table>
+
+<hr/>
+<h3>Data du Mongo DB</h3>
+<ul>
+    <li *ngFor="let team of teams">
+        {{team.id}}--
+        {{team.name}}--
+        {{team.country | uppercase }}</li>
+</ul>

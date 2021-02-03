@@ -13,6 +13,9 @@ export class ListEquipesComponent implements OnInit {
   equipes: string[] = ["PSG", "Barcelone", "OM", "Milan"];
   equipesFull: any = [];
   joueurs: any = [];
+
+  teams: any;
+
   public nbr: number = 0;
   public res: boolean = false;
 
@@ -21,6 +24,14 @@ export class ListEquipesComponent implements OnInit {
   ngOnInit(): void {
     this.equipesFull = this.service.getEquipes();
     this.joueurs = this.service.getJoueurs();
+
+    // appel de la méthode getListEquipe
+    this.service.getListEquipes().subscribe(
+      res => {
+        //console.log(res)
+        this.teams = res;
+      }
+    )  
   }
 
   increment() { 

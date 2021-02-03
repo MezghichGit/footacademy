@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EquipeService {
 
+  private baseUrl = "http://127.0.0.1:85/equipes";
 
   private equipesFull: any = [
     {
@@ -53,8 +55,14 @@ export class EquipeService {
 
 
 
-  constructor() { }
+  constructor(private Http: HttpClient) { }
 
   getEquipes() { return this.equipesFull; }
   getJoueurs() { return this.joueurs; }
+
+
+  // récupération des équipes depuis le backend node express js
+  getListEquipes() { 
+         return this.Http.get(this.baseUrl);
+  }
 }
