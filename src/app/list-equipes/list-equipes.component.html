@@ -22,5 +22,17 @@ Nombre d'équipes : {{nbr}}
 <hr/>
 
 <ul>
-    <li *ngFor="let equipeDetails of equipesFull">{{equipeDetails.id}}--{{equipeDetails.nom}}--{{equipeDetails.pays}}</li>
+    <li *ngFor="let equipeDetails of equipesFull">{{equipeDetails.id}}--{{equipeDetails.nom}}--{{equipeDetails.pays | uppercase }}</li>
 </ul>
+
+<hr/>
+
+<table border="1" align="center" class="table">
+    <tr><th>ID</th><th>Numéro</th><th>Nom</th><th>Poste</th></tr>
+    <tr *ngFor="let joueur of joueurs">
+     <td>{{joueur.id}}</td>
+     <td>{{joueur.numero}}</td>
+     <td>{{joueur.nom|uppercase}}</td>
+     <td>{{joueur.poste}}</td>
+    </tr>
+</table>
