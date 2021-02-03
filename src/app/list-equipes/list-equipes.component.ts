@@ -9,6 +9,25 @@ export class ListEquipesComponent implements OnInit {
 
   titre: string = "Global Knowledge";  // attribut
 
+  equipes: string[] = ["PSG", "Barcelone", "OM", "Milan"];
+  equipesFull: any = [
+    {
+      id: 1,
+      nom: 'PSG',
+      pays : 'France'
+    },
+    {
+      id: 2,
+      nom: 'Barcelon',
+      pays : 'Espagne'
+    },
+    {
+      id: 3,
+      nom: 'Milan',
+      pays : 'Italie'
+    }
+  ];
+
   public nbr: number = 0;
   public res: boolean = false;
 
