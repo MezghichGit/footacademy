@@ -26,7 +26,7 @@ export class ListEquipesComponent implements OnInit {
     this.joueurs = this.service.getJoueurs();
 
     // appel de la méthode getListEquipe
-    this.service.getListEquipes().subscribe(
+    this.service.getListEquipes().subscribe(  // subscribe pêrmet d'attendre jusqu'à récupération du resltat
       res => {
         //console.log(res)
         this.teams = res;
