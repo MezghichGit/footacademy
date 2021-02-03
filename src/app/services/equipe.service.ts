@@ -65,4 +65,9 @@ export class EquipeService {
   getListEquipes() { 
          return this.Http.get(this.baseUrl);
   }
+
+  // méthode d'ajout d'une nouvelle équipe
+  addEquipe(obj:any) {
+    return this.Http.post(this.baseUrl, obj);
+   }
 }
