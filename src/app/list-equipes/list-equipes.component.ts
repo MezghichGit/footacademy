@@ -42,4 +42,21 @@ export class ListEquipesComponent implements OnInit {
   display() { 
     this.res = !this.res;
   }
+  refreshEquipe() {
+    this.service.getListEquipes().subscribe(  
+    res => {
+      this.teams = res;
+    }
+  )  
+  }
+
+  deleteEquipe(team) {
+    this.service.deleteEquipe(team).subscribe(
+      
+      res => {
+        //console.log(res)
+        this.refreshEquipe();
+      }
+    );
+   }
 }

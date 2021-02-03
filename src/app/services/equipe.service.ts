@@ -69,5 +69,10 @@ export class EquipeService {
   // méthode d'ajout d'une nouvelle équipe
   addEquipe(obj:any) {
     return this.Http.post(this.baseUrl, obj);
-   }
+  }
+  
+    // méthode de suppression d'une équipe
+    deleteEquipe(obj:any) {
+      return this.Http.delete(this.baseUrl+ '/' + obj['id']);
+     }
 }
