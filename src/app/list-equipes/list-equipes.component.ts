@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListEquipesComponent implements OnInit {
 
+  titre: string = "Global Knowledge";  // attribut
+
+  public nbr: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  increment() { 
+   this.nbr = this.nbr + 1;
+  }
 }
