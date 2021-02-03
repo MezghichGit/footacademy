@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EquipeService } from '../services/equipe.service';
 
 @Component({
   selector: 'app-list-equipes',
@@ -15,9 +16,11 @@ export class ListEquipesComponent implements OnInit {
   public nbr: number = 0;
   public res: boolean = false;
 
-  constructor() { }
+  constructor(private service:EquipeService) { }
 
   ngOnInit(): void {
+    this.equipesFull = this.service.getEquipes();
+    this.joueurs = this.service.getJoueurs();
   }
 
   increment() { 
